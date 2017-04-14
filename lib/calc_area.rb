@@ -32,7 +32,6 @@ class CalcArea
       result = (i * i * 3.14).round
       @result.push(result)
     end
-    p @result
   end
   
   def print_result
