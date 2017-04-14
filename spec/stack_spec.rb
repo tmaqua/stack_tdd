@@ -1,7 +1,9 @@
+require 'Stack'
 require 'spec_helper'
 
 describe Stack do
   it 'should' do
-    expect().to be false
+    stack = Stack.new
+    expect(stack).to be false
   end
 end
