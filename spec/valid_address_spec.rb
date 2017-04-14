@@ -9,6 +9,10 @@ describe Address do
     expect(address.checkAddress("　あ@example.com")).to eq "ng"
     
     expect(address.checkAddress('"a..b"@example.com')).to eq "ok"
+    expect(address.checkAddress('"a()b"@example.com')).to eq "ok"
+    expect(address.checkAddress('"a(),.b"@example.com')).to eq "ok"
+    expect(address.checkAddress('"a;::::;;fajfijfajif()kjafidj"@example.com')).to eq "ok"
+    expect(address.checkAddress('"a[][][][][]<><>@@<fajif()kjafidj"@example.com')).to eq "ok"
   end
 
 

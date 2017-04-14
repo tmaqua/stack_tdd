@@ -8,7 +8,7 @@ class Address
   def checkAddress(address)
     target = address.gsub(/@example.com$/, "")
     valid_address_first  = /[^ -~｡-ﾟ]/
-    valid_address_second = /^\"[\(\),\.:;<>@\[\]\"\\]+\"$/
+    valid_address_second = /^\"*.[\(\),\.:;<>@\[\]\"\\]*.\"$/
     valid_address_third  = //
     valid_address_fourth = //
     valid_address_fifth  = //
