@@ -9,4 +9,11 @@ class Stack
     @stack.empty?   
   end
 
+  def top
+    @stack[0]
+  end
+
+  def push(element)
+    @stack.push(element)
+  end
 end
