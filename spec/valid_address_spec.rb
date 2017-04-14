@@ -3,8 +3,10 @@ require 'Address'
 
 describe Address do
   it 'test' do
-    expect(checkAddress("a@example.com")).to eq "ok"
-    expect(checkAddress("a..b@example.com")).to eq "ng"
+    address = Address.new
+    expect(address.checkAddress("a@example.com")).to eq "ok"
+#    expect(address.checkAddress("a..b@example.com")).to eq "ng"
+    expect(address.checkAddress("　あ@example.com")).to eq "ng"
   end
 
 
