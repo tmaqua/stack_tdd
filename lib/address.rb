@@ -6,15 +6,21 @@ class Address
 	end
 
   def checkAddress(address)
+    target = address.gsub(/@example.com$/, "")
     valid_address_first  = /[^ -~｡-ﾟ]/
-    valid_address_second = //
+    valid_address_second = /^\"[\(\),\.:;<>@\[\]\"\\]+\"$/
     valid_address_third  = //
     valid_address_fourth = //
     valid_address_fifth  = //
-    if address =~ valid_address_first
-      'ng'
+    if target =~ valid_address_first
+      return 'ng'
     else
-      'ok'
+      if target.match(/[\(\),\.:;<>@\[\]\"\\]+/)
+        unless target =~ valid_address_second
+          return 'ng'
+        end
+      end
+      return 'ok'
     end
   end
 end
