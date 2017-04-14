@@ -21,4 +21,12 @@ class Stack
     @stack.size
   end
 
+  def pop
+    if @stack.size != 0
+      @stack.pop
+    else
+      raise StandardError
+    end
+  end
+
 end

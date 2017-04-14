@@ -27,4 +27,12 @@ describe Stack do
     expect(stack.empty?).to be false
     expect(stack.size).to eq 1
   end
+  
+  it 'raise error' do
+    stack = Stack.new
+    expect{
+      stack.pop()
+    }.to raise_error(StandardError)
+  end
+
 end
