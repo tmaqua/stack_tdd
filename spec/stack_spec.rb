@@ -41,4 +41,12 @@ describe Stack do
       stack.top()
     }.to raise_error(StandardError)
   end
+
+  it 'raise error in push & pop' do
+    stack = Stack.new
+    stack.push(1)
+    stack.pop()
+    expect(stack.size()).to eq 0
+  end
+
 end
