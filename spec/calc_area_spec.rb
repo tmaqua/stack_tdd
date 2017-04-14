@@ -14,11 +14,13 @@ describe CalcArea do
 
   it 'calculate radius' do
     @calcArea.calculate
-
+    @calcArea.print_result
+    p @calcArea.result
     @calcArea.result.each_with_index do |r,i|
       src_input = @calcArea.valid_inputs[i]
       expect(r).to eq (src_input * src_input * 3.14).round
     end
+
   end
   
 end
