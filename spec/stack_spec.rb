@@ -2,8 +2,8 @@ require 'Stack'
 require 'spec_helper'
 
 describe Stack do
-  it 'should' do
+  it 'is empty' do
     stack = Stack.new
-    expect(stack).to be false
+    expect(stack.empty?).to be true
   end
 end
