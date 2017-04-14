@@ -35,4 +35,10 @@ describe Stack do
     }.to raise_error(StandardError)
   end
 
+  it 'raise error in top method' do
+    stack = Stack.new
+    expect{
+      stack.top()
+    }.to raise_error(StandardError)
+  end
 end

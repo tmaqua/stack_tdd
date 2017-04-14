@@ -10,6 +10,9 @@ class Stack
   end
 
   def top
+    if @stack.size == 0
+      raise StandardError
+    end
     @stack[0]
   end
 
