@@ -5,7 +5,8 @@ describe CalcArea do
   it 'standard input' do
     calcArea = CalcArea.new
     calcArea.getInputs
-    p calcArea.stdins
+    calcArea.filterInput
+
     expect(calcArea.checkInput).to be true
   end
 end
