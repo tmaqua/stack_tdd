@@ -17,7 +17,7 @@ describe CalcArea do
 
     @calcArea.result.each_with_index do |r,i|
       src_input = @calcArea.valid_inputs[i]
-      expect(r).to eq (src_input * src_input * 3.14)
+      expect(r).to eq (src_input * src_input * 3.14).round
     end
   end
   

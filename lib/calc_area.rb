@@ -1,10 +1,12 @@
 class CalcArea
   attr_accessor :stdins
   attr_accessor :valid_inputs
+  attr_accessor :result
 
   def initialize
     @stdins       = []
     @valid_inputs = []
+    @result       = []
   end
  
   def getInputs
@@ -23,5 +25,12 @@ class CalcArea
 
   def checkInput
     @valid_inputs.size != 0
+  end
+
+  def calculate
+    @valid_inputs.each do |i|
+      result = (i * i * 3.14).round
+      @result.push(result)
+    end
   end
 end
