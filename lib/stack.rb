@@ -16,4 +16,9 @@ class Stack
   def push(element)
     @stack.push(element)
   end
+
+  def size
+    @stack.size
+  end
+
 end
