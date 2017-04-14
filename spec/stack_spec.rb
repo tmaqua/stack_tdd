@@ -20,4 +20,11 @@ describe Stack do
     stack.push(2)
     expect(stack.size).to eq 2
   end
+
+  it 'triangulation' do
+    stack = Stack.new
+    stack.push(1)
+    expect(stack.empty?).to be false
+    expect(stack.size).to eq 1
+  end
 end
